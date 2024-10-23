@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Passion One';
+    src: url("../fontes/Passion_One/PassionOne-Regular.ttf") format('truetype');}
+
+    @font-face {
+        font-family: 'Sriracha';
+        src: url('../fontes/Sriracha/Sriracha-Regular.ttf') format('truetype');}
+        :root{
+            --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+            --fonte2: 'Passion One';
+            --fonte3: 'Sriracha';
+        }
+* {  /*configurações gerais*/
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    }
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*VERSALETE*/
+    /*text-transform: uppercase; /*maiúsculas*/
+    font-family: var(--fonte2);
+    font-size: 10vw /*10% da largura ou 4em*/;
+}
+header > p { padding-bottom: 50px; }
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover {
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.5em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw /* 3.5% da view largura ou pode colocar 2em*/;
+}
+section > p {
+    padding-bottom: 2em;
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgb(105, 102, 102);
+    color: whitesmoke;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed; /*efeito paralax*/
+}
+section.imagem > p {
+    display: inline-block; /*width: 400px;*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.308);
+    text-shadow: 1px 1px 0px black;
+}
+section#img01{
+    background-image: url('../pacote-d012/imagens/background001.jpg');
+    background-position: right center;
+    /*background-size: cover; pode colocar só no genérico, não precisa estar nos dois*/
+}
+section#img02{
+    background-image: url('../pacote-d012/imagens/background002.jpg');
+    background-position: right center;
+    
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    
+}
+footer  strong {
+    font-variant: small-caps;
+    
+}
